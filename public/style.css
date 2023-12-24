@@ -1,0 +1,387 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif;
+}
+body {
+  position: relative;
+}
+
+/* utility Classes  */
+/* Color Variables  */
+:root {
+  --netflix-color: rgb(229, 9, 20);
+  --primary-black: rgba(0, 0, 0, 0.7);
+  ---secondary-white: rgba(255, 255, 255);
+  ---dark-black: rgba(0, 0, 0);
+}
+/* maximum width  */
+.max-width {
+  max-width: 980px;
+}
+/* Primary Button  */
+.primary-btn {
+  padding: 0.4rem 1.2rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.4rem;
+  background: var(--netflix-color);
+  color: var(---secondary-white);
+  outline: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.primary-btn:hover {
+  background-color: rgb(172, 6, 15);
+}
+
+/* Secondary Button  */
+.secondary-btn {
+  padding: 0.4rem 1.2rem;
+  border: 0.01px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.4rem;
+  background: rgba(0, 0, 1, 0.091);
+  color: var(---secondary-white);
+  outline: none;
+  margin: 0rem 1.5rem;
+  transition: all 0.3s;
+}
+
+.secondary-btn:hover {
+  box-shadow: 1px 1px 9px rgba(255, 255, 255, 0.3);
+}
+.secondary-btn svg {
+  vertical-align: text-top;
+}
+
+/* Secondary Button select Element  */
+.secondary-btn select {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+/* Secondary Button's option elements  */
+.secondary-btn select option {
+  color: black;
+    font-weight: 500;
+  width: 3rem;
+}
+
+/* Main Container  */
+.container {
+  background-color: var(--primary-black);
+  height: 100vh;
+}
+
+/* Language symbol inside language element */
+.buttons button i {
+  font-size: 1.2rem;
+  color: var(---secondary-white);
+  background: transparent;
+  vertical-align: middle;
+}
+
+/* Select tag for options  */
+select {
+  background: transparent;
+  color: var(---secondary-white);
+  border: none;
+  outline: none;
+}
+/* Header starts here */
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 6rem;
+}
+/* Netflix logo  */
+.logo img {
+  width: 32%;
+}
+
+/* Netflix background banner */
+.container::before {
+  content: "";
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+  opacity: 0.7;
+  background-image: url("../images/Netflix\ home\ banner.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Next div starts from here  */
+.mainePageText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: var(---secondary-white);
+  gap: 1rem;
+}
+/* h1 Heading  */
+.mainePageText h1 {
+  font-size: 2.5rem;
+}
+/* h3 Heading  */
+.mainePageText h3 {
+  font-size: 1.6rem;
+}
+/* p Paragraph  */
+.mainePageText p {
+  font-size: 1.4rem;
+}
+/* Email box */
+input[type="email"] {
+  padding: 1rem 10rem 1rem 2rem;
+  color: var(---secondary-white);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Get started Button  */
+input[type="submit"] {
+  padding: 0.8rem 1.5rem;
+  margin-right: 0.2rem;
+  font-size: 1.3rem;
+}
+
+/* Next button  */
+form i {
+  font-size: 2rem;
+  vertical-align: middle;
+  margin-bottom: 0.5rem;
+}
+/* A middle div for a line  */
+.middleDiv {
+  width: 100%;
+  height: 0.6rem;
+  background-color: rgb(35, 35, 35);
+}
+/* New Div Starts from here enjoyOnyourTv */
+.enjoyOnyourTv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(---dark-black);
+  padding: 4rem 2rem;
+}
+.center-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* padding: 2rem 1rem; */
+  gap: 1.5rem;
+}
+.textContent {
+  color: white;
+  /* max-width: 32rem; */
+}
+/* Text content div of every card  */
+/* Heading in text content  */
+.textContent h2 {
+  font-size: 3rem;
+  margin-bottom: 2.2rem;
+}
+/* Paragraph in Text Content  */
+.textContent p {
+  font-size: 1.4rem;
+}
+/* Media Content Div of Every Card  */
+.mediaContent {
+  position: relative;
+  z-index: 1;
+}
+/* Img of every Card   */
+.mediaContent img {
+  z-index: 1;
+  max-width: 28rem;
+}
+/* Video div of every card  */
+.videoDiv {
+  position: absolute;
+  right: 3rem;
+  top: 4rem;
+  z-index: -1;
+}
+/* Video Of every card  */
+.videoDiv video {
+  max-width: 21.4rem;
+}
+
+/* To reverse the direction of cards  */
+.reversedir {
+  flex-direction: row-reverse;
+}
+
+/* A video div of second card  */
+.showOffline {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  bottom: -1rem;
+  left: 4.55rem;
+  border: 1px solid white;
+  border-radius: 1rem;
+  background: black;
+}
+/* Image inside the second card  */
+.showOffline img {
+  width: 5rem;
+  padding: 0.6rem;
+}
+/* paragraph inside the second card  */
+.showOffline p {
+  color: #0071eb;
+}
+/* Third Section of cards starts from here  */
+#thirdSection {
+  position: absolute;
+  right: 5rem;
+  top: 2rem;
+  z-index: -1;
+}
+/* Video inside the third section  */
+#thirdSection video {
+  max-width: 18rem;
+}
+
+/* span inside the third section  */
+span {
+  width: 8rem;
+}
+
+/* Faq Section starts from here  */
+.faq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0);
+}
+/* Subsection of FAQ section  */
+.faq-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 2rem auto; */
+  margin: 2rem auto;
+  gap: 1.5rem;
+}
+/* Each Question Element  */
+.eachElement {
+  min-width: 50rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.8rem 0rem;
+  background-color: rgb(45, 45, 45);
+  color: white;
+  padding: 0.2rem 1rem 1rem 1rem;
+  font-size: 1.3rem;
+  transition: ease-in 0.2s;
+}
+/* Buttons of Questions  */
+.eachElement button {
+  background: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.eachElement:hover {
+  background-color: rgba(45, 45, 45, 0.785);
+  cursor: pointer;
+}
+
+/* Heading and Paragraph in FAQ  */
+.faq-section h2,
+p {
+  color: rgba(255, 255, 255);
+}
+.faq-section h2 {
+  font-size: 3rem;
+}
+.faq-section p {
+  font-size: 1.2rem;
+  margin-bottom: -0.8rem;
+}
+
+/* Footer  */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0);
+}
+/* Sub Footer of footer  */
+.sub-footer {
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin: 4rem auto;
+}
+/* paragraph and anchor tag inside the sub footer section  */
+.sub-footer p,
+a {
+  color: rgba(255, 255, 255);
+  align-self: flex-start;
+}
+/* secondary button in footer  */
+.sub-footer button {
+  max-width: 10rem;
+  margin-left: 0rem;
+}
+/* A div for list  */
+.uls {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 6rem;
+}
+/* lists of links in footer  */
+.uls ul li {
+  list-style: none;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+/* links  */
+.uls ul li a {
+  color: rgba(255, 255, 255);
+}
+
+.active {
+  display: block !important;
+  transition: all 2s;
+}
+/* .cross-icon {
+  background: url(../images/cross.png);
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+.answers {
+  display: none;
+  min-width: 50rem;
+  width: 10rem;
+  background-color: rgb(45, 45, 45);
+}
+.answers p {
+  margin: -0.6rem 0rem 0rem 1rem;
+  padding: 1.2rem 0.5rem;
+}
